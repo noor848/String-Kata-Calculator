@@ -5,7 +5,6 @@ namespace TestingString
     public class UnitTest1
     {
         [Theory]
-     
         [InlineData("1,2,2,1")]
         public void Test1(string InputString)
         {
