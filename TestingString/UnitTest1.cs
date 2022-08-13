@@ -14,5 +14,16 @@ namespace TestingString
             ArgumentException exception = Assert.Throws<ArgumentException>(act);
             Assert.Equal("Negative Number"+ Actual, exception.Message);
         }
+
+        [Theory]
+        [InlineData("1,2,1001",3)]
+        public void Test2(string InputString, int Actual)
+        {
+            Add c = new Add();
+            int sum= c.CalculatingString(InputString);
+            Assert.Equal(sum,Actual);
+        }
+
+
     }
 }
