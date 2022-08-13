@@ -8,7 +8,7 @@ namespace StringAdding
             {
                 return 0;
             }
-            String[] strlist = StringInput.Split(new char[]{','}, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
+            String[] strlist = StringInput.Split(new char[]{',','\n'}, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
             int sum = 0;
             foreach(var str in strlist)
             {
