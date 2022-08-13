@@ -32,9 +32,12 @@ namespace StringAdding
                 {
                     NegativeNumbers.Add(num);
                 }
-                sum +=num;
-                 
+                if (num <= 1000)
+                {
+                    sum += num;
                 }
+            }
+
             if (NegativeNumbers.Any())
             {
                 throw new ArgumentException("Negative Number" + String.Join(",", NegativeNumbers));
