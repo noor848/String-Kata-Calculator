@@ -4,8 +4,8 @@ namespace StringAdding
     {
         public int CalculatingString(string StringInput)
         {
-            String[] NumbersList;
-            String[] strlist;
+            String[] NumbersList = {};
+            String[] strlist = {};
             int sum = 0;
 
             if (string.IsNullOrEmpty(StringInput))
@@ -18,11 +18,12 @@ namespace StringAdding
                 ///"//;\n1;2" 
                 NumbersList = StringInput.Split(new char[] { '\n' },
                 StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
-                strlist = NumbersList[1].Split(new char[] { ',', '\n', ';' }, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
-                foreach (var str in strlist)
-                {
-                    sum += Int16.Parse(str);
-                }
+              
+            }
+            strlist = NumbersList[1].Split(new char[] { ',', '\n', ';' }, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var str in strlist)
+            {
+                sum += Int16.Parse(str);
             }
             return sum;
         }
