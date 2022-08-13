@@ -8,11 +8,12 @@
             {
                 return 0;
             }
-            String[] strlist = StringInput.Split(new char[]{','} , StringSplitOptions.RemoveEmptyEntries);
+            var NumList = StringInput.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse
+                ).ToList();
             int sum = 0;
-            foreach(var str in strlist)
+            foreach(var num in NumList)
             {
-                sum +=Int16.Parse(str);    
+                sum +=num;    
             }
 
             return sum;
