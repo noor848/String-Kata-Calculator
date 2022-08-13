@@ -5,12 +5,12 @@ namespace TestingString
     public class UnitTest1
     {
         [Theory]
-        [InlineData("1\n2,2,1")]
-        public void Test1(string InputString)
+        [InlineData("//;\n1;2", 3)]
+        public void Test1(string InputString,int Actual)
         {
             Add c = new Add();
             int sum = c.CalculatingString(InputString);
-            Assert.Equal(6, sum);
+            Assert.Equal(Actual,sum);
           
         }
     }
