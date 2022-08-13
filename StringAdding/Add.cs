@@ -18,13 +18,22 @@ namespace StringAdding
                 ///"//;\n1;2" 
                 NumbersList = StringInput.Split(new char[] { '\n' },
                 StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
-              
+                strlist = NumbersList[1].Split(new char[] { ',', '\n', ';' }, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var str in strlist)
+                {
+                    sum += Int16.Parse(str);
+                }
+
             }
-            strlist = NumbersList[1].Split(new char[] { ',', '\n', ';' }, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
-            foreach (var str in strlist)
+            else
             {
-                sum += Int16.Parse(str);
+                strlist = StringInput.Split(new char[] { ',', '\n', ';' }, StringInput.Length, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var str in strlist)
+                {
+                    sum += Int16.Parse(str);
+                }
             }
+          
             return sum;
         }
     }
