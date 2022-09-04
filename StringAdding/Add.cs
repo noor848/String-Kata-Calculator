@@ -2,7 +2,7 @@
 {
     public class AddString
     {
-        public int CalculatingString(string StringInput)
+        public int Add(string StringInput)
         {           
             int sum = 0;
             List<int> NumbersList;
