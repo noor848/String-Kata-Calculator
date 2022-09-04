@@ -1,6 +1,6 @@
 ﻿namespace StringAdding
 {
-    public class Add
+    public class AddString
     {
         public int CalculatingString(string StringInput)
         {           
